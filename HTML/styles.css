@@ -1,0 +1,58 @@
+h1 {
+    color: #212121;
+}
+h2{
+    color: #424242;
+}
+body{
+    color: #616161;
+}
+p, li {
+    color:black;
+    
+}
+li {
+    list-style-type: square;
+    line-height: 24px;
+    font-size: 24px;
+}
+li.special {
+    color: blue;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.note {
+    color: brown;
+    font-weight: bolder;
+    background-color: chartreuse;
+    
+}
+li em {
+    color: rebeccapurple;
+}
+em{
+    color: rebeccapurple;
+}
+h1 + p {
+    font: size 500px;
+}
+a:link {
+    color: violet;
+
+}
+a:visited {
+    color: yellowgreen;
+}
+body h1 + p. special {
+    color:yellowgreen;
+    background-color: white;
+    padding: 50px;
+}
+p {
+    background-color:blanchedalmond;
+    background-image: url(bg-graphic.png);
+    background-position: 10px 10px;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}

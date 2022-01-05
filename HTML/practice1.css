@@ -1,0 +1,33 @@
+p {
+    color: black;
+    background-color: turquoise;
+    border: 1px solid black;
+    
+}
+h1 {
+    color:black;
+    font-size:xx-large;
+    background-color: blanchedalmond;
+    width: max-content;
+    border: thick;
+
+}
+.outer {
+    border: 5px solid black;
+}
+.box {
+    padding: 10px;
+    width: calc( 90% - 50px );
+    background-color: rebeccapurple;
+    color:white;
+    margin: 30px;
+    height: 100px;
+    transform: rotate(0.8turn);
+
+}
+
+span.special {
+    border: 1px solid black;
+    background-color:mediumblue;
+
+}

@@ -1,0 +1,460 @@
+/*.box {
+    background-color: #567895;
+}*/
+h2 {
+    background-color: black;
+    color: white;
+}
+span {
+    background-color: rgba(255,255,255,.5);
+}
+.a {
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg");
+    
+
+    
+}
+.b {
+    background-image: url("https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images-0.jpg");
+    width:500px;
+    height: 200px;
+    background-size: contain;
+    
+}
+.box1 {
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg");
+    background-repeat: no repeat;
+    width: 500px;
+    height: 200px;
+    background-size: contain;
+    background-position:center;
+
+}
+ .d {
+     background-image: linear-gradient(105deg, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+     width: 500px;
+     height: 100px;
+ }
+ .e {
+     background-image: url(https://cdn.slashgear.com/wp-content/uploads/2020/04/star-wars-backgrounds-06.jpg),url(https://upload.wikimedia.org/wikipedia/commons/f/f5/Ginkgo_Biloba_Leaves_-_Black_Background.jpg);
+     width: 500px;
+     height: 200px;
+     background-size: contain;
+     background-repeat: repeat-y,repeat-x;
+     background-position: top right;
+     
+     
+ }
+ .f {
+     background: linear-gradient(rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat, url(https://upload.wikimedia.org/wikipedia/commons/f/f5/Ginkgo_Biloba_Leaves_-_Black_Background.jpg) center no-repeat, rebeccapurple;
+     width: 500px;
+     height: 500px;
+ }
+ /*borders*/
+ h1 {
+     border-top: 2px dotted rebeccapurple;
+     border-bottom: 1em double rgb(24, 163, 78);
+ }
+ .g {
+     border:  5px solid #0b385f;
+     background-color: #567895;
+     border-bottom-style: dashed;
+     color: #fff;
+     border-radius: 10px;
+     border-top-right-radius: 2em 30%;
+     border-bottom-left-radius: 2em 30%;
+
+ }
+ .horizontal {
+     writing-mode: horizontal-tb;
+    
+ }
+ .vertical {
+     writing-mode: vertical-rl;
+     
+
+ }
+ .box {
+     inline-size: 150px;
+ }
+ .i {
+     writing-mode: horizontal-tb;
+ }
+ .logical {
+     margin-block-start: 20px;
+     padding-inline-end: 2em;
+     padding-block-start: 2px;
+     border-block-start: 1px solid black;
+     border-inline-end: 10px dotted rebeccapurple;
+     border-block-end: 1em double orange;
+     border-inline-start: 1px solid black;
+}
+.physical {
+    margin-top: 20px;
+    padding-right: 2em;
+    padding-top: 2px;
+    border-top: 1px solid black;
+    border-right: 10px dotted rebeccapurple;
+    border-bottom: 1em double orange;
+    border-left: 1px solid black;
+}
+h3 {
+    border-bottom: 5px solid black;
+    width:fit-content;
+}
+img {
+    float: inline-start;
+    margin-block-end: 10px;
+    margin-inline-end: 10px;
+    width: 200px;
+    height: 200px;
+
+}
+.j {
+    inline-size: 200px;
+    writing-mode: horizontal-tb;
+}
+/*overflowing content*/
+.overflow {
+    border: 5px solid black;
+    width: 200px;
+    height: 100px;
+    /*default*/
+    /*overflow: visible;*/
+    /*hides the content*/
+    /*overflow: hidden;*/
+    /*overflow: scroll;*/
+    /*overflow-x: scroll;*/
+    /*it automatically provides scroll bars when content is overflow*/
+    overflow: auto;
+}
+.word {
+    border: 5px solid black;
+    width: 50px;
+    font-size: 100px;
+    overflow-x: scroll;
+}
+/*values and units*/
+.length {
+    font-size: 2em;
+}
+.px {
+    border: 5px solid black;
+    width: 208px;
+    
+}
+.vw {
+    border: 5px solid black;
+    width: 2vw;
+    overflow: auto;
+   
+}
+.em {
+    border: 5px solid black;
+    width: 13em;
+    
+}
+/*ems(parent element sizing) and rems(root element sizing)*/
+html {
+    font-size: 16px;
+
+}
+
+.ems li {
+    font-size: 80%;
+}
+.rems li {
+    font-size: 1.3rem;
+}
+.l {
+    border: 5px solid rebeccapurple;
+    width: 400px;
+    padding: 48px;
+}
+.px1 {
+    width: 200px;
+    border: 5px solid black;
+   
+}
+.percent {
+    width: 40%;
+    border: 5px solid black;
+    
+}
+.n {
+    border: 5px solid rebeccapurple;
+    
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    text-align: center;
+    margin: 10px;
+    
+
+    
+}
+.m {
+    background-image: url("https://i.pinimg.com/736x/91/4c/8a/914c8ad918ebadc9b8a23a18bd592c6d.jpg");
+    width: 200px;
+    height: 200px;
+}
+.o {
+    font-size: 24px;
+    text-align: center;
+    border: 5px solid black;
+    width:fit-content;
+    padding: 48px;
+    }
+ 
+.one {
+     background-color: #02798b;
+     border-radius: 10px;
+     width: 500px;
+     height: 100px;
+}
+.two {
+    background-color: #c55da1;
+    border-radius: 10px;
+    width: 500px;
+    height: 100px;
+}
+.three {
+    background-color: #128a7d;
+    border-radius: 10px;
+    width: 500px;
+    height: 100px;
+    margin: 10px;
+}
+.p {
+    border: 5px solid black;
+    background-image: url(https://media.istockphoto.com/photos/round-podium-or-pedestal-with-blue-background-picture-id1226478932?b=1&k=20&m=1226478932&s=170667a&w=0&h=hXsvxQilNanpKx7QC_tIsFUOKPl8fdIDfJ_QSKXesGE=);
+    border-radius: 20px;
+    padding: 48px;
+    width: fit-content;
+    text-align: center;
+    
+}
+/*last value represent opaque-for 0:fully transparent and for 1:opaque(non-transparent)*/
+.four {
+    background-color: rgb(2,121,139,.3);
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    
+    
+}
+.five {
+    background-color: rgb(197,93,161,.7);
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    
+}
+.six {
+    background-color: rgb(18,138,125,.9);
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    
+}
+.q {
+    border: 5px solid black;
+    background-image: url(https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg);
+    
+    width:fit-content;
+    text-align: center;
+    padding: 48px;
+    border-radius: 10px;
+
+}
+.seven {
+    background-color: hsl(188, 97%, 28%,.3);
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+}
+.eight {
+    background-color: hsl(321, 47%, 57%,.7);
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+}
+.nine {
+    background-color: hsl(174, 77%, 31%,.9);
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+}
+.image {
+    background-image:url(https://i.pinimg.com/236x/aa/e8/83/aae8831735ebbad80a4c724131665104.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    
+}
+.gradient {
+    background-image: linear-gradient(90deg,rgba(119,0,255,1) 39%,rgba(0,212,255,1) 100%);
+    width: 200px;
+    height: 200px;
+}
+.position {
+    width: 200px;
+    height: 200px;
+    border: 5px solid rebeccapurple;
+   
+    background-image: url(https://p.kindpng.com/picc/s/14-144084_gold-stars-png-single-gold-stars-transparent-png.png);
+    background-position: right 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*pseudo elements*/
+/*.pseudo {
+    font-size: 48px;
+    font-weight: bold;
+}*/
+article p::first-line {
+    font-size: 48px;
+    font-weight: bold;
+}
+/*generating content with before and after*/
+/*strings and identifiers*/
+
+.r::after {
+    content: "this shows after the paragraph content displays";
+}
+.r::before {
+    content: "this shows before the paragraph content displays";
+}
+.s::after {
+    content: "!";
+}
+.t::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    display: block;
+    border: 5px solid black;
+    background-color: rebeccapurple;
+}
+
+.u {
+    width: 400px;
+    height: 100px;
+    padding: 1em;
+    border-radius: 10px;
+    border: 5px solid rebeccapurple;
+    background-color:rgba(0,249,255,1);
+}
+.u::after {
+    content: "this is a string.i know because it is quoted in css";
+    font-size: 32px;
+    
+}
+/*functions*/
+.function {
+    width: 400px;
+    border: 5px solid rebeccapurple;
+    background-color: rgba(255,255,255,.2);
+    height: 50px;
+}
+.v {
+    width: calc(20% + 100px);
+}
+img {
+    border: 5px solid rebeccapurple;
+}
+.intrinsic {
+    border: 5px solid black;
+    
+}
+.extrinsic {
+    border: 5px solid navy;
+    width: 100px;
+    /*height: 100px;*/
+}
+.percentage1 {
+    border: 5px solid plum;
+    width: 50%;
+}
+.margin {
+    border: 5px solid rgba(119,0,255,1);
+    border-radius: 20px;
+    width: 300px;
+    margin-left: 20%;
+    padding: 10%;
+}
+.width {
+    width: 500px;
+}
+.w1 {
+    width: 30%;
+}
+.min_width {
+    width: 500px;
+}
+.m1 {
+    width: 30%;
+}
+.max_width {
+    width: 500px;
+}
+.M1 {
+    max-width: 30%;
+}
+.viewport {
+    border: 5px solid blue; 
+    font-size: 10vh;
+    height: 10vh;
+    width: 10vw;
+}
+/*sizing images*/
+ .imaze {
+   
+    width: 200px;
+    height: 200px;
+}
+.img {
+    
+    width: 100%;
+    height: 100%;
+}
+.cover {
+    object-fit: cover;
+}
+.contain {
+    object-fit: contain;
+}
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 20px;
+
+}
+
+
+
+
+.layout > div {
+    background-color: rebeccapurple;
+    border-radius: .5em;
+    
+}
+/*form elements*/
+input[type="text"],input[type="email"] {
+    border: 2px solid #000;
+    margin: 0 0 1em 0;
+    padding: 10px;
+    width: 100%;
+}
+input[type="submit"] {
+    border: 3px solid #333;
+    border-radius: 5px;
+    padding: 10px 2em;
+    background-color: #999;
+    color: #fff;
+    font-weight:bold;
+}
+input[type="submit"]:hover {
+    background-color: #333;
+}
