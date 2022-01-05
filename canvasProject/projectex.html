@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <style>
+        canvas {
+            border: 1px solid black;
+            margin: 2em 2em auto;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="rectangle" width="800" height="800"></canvas>
+    <script>
+        var ctx = document.getElementById('rectangle').getContext('2d');
+        ctx.beginPath();
+        ctx.arc(180, 100, 50, 0, Math.PI * 2);
+        ctx.stroke();
+        /*ctx.beginPath();
+        ctx.moveTo();
+        ctx.lineTo();
+        ctx.moveTo();
+        ctx.lineTo();
+        ctx.moveTo();
+        ctx.lineTo();
+        ctx.closePath();
+        ctx.stroke();*/
+        for (var i = 0; i < 6; i++) {
+            for (var j = 0; j < 2; j++) {
+                ctx.save();
+                ctx.translate(10 + j * 180, 10 + i * 80);
+                ctx.strokeRect(30, 160, 100, 50);
+                ctx.restore();
+
+            }
+        }
+        ctx.beginPath();
+        ctx.arc(180, 700, 50, 0, Math.PI * 2);
+        ctx.stroke();
+
+
+
+    </script>
+</body>
+
+</html>+-
+
+
+
+
+
+
+

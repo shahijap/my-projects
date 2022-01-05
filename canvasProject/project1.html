@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+    <canvas id="flowChart"></canvas>
+    <script>
+        var ctx = document.getElementById('flowChart').getContext('2d');
+        ctx.beginPath();
+        ctx.arc(100, 50, 25, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(78, 60);
+        ctx.lineTo(25, 95);
+        ctx.moveTo(122, 60);
+        ctx.lineTo(180, 95);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.strokeRect(0, 95, 80, 40);
+        ctx.strokeRect(150, 95, 80, 40);
+        ctx.beginPath();
+        ctx.moveTo(25, 160);
+        ctx.lineTo(25, 135);
+        ctx.moveTo(180, 160);
+        ctx.lineTo(180, 135);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.strokeRect(0, 150, 80, 40);
+        ctx.strokeRect(150, 150, 80, 40);
+
+
+    </script>
+</body>
+
+</html>

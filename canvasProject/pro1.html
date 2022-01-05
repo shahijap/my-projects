@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="chart" width="1500" height="800">
+        <img src="https://sites.google.com/site/3dtriangularpyramid/_/rsrc/1467888693304/home/20080724-IMG_3237.jpg?height=377&width=683"
+            id="pyramid" width="50" height="50"></canvas>
+    <script>
+        var ctx = document.getElementById('chart').getContext('2d');
+        ctx.fillStyle = 'skyblue';
+        ctx.fillRect(20, 20, 50, 50);
+        ctx.beginPath();
+        ctx.moveTo(100, 45);
+        ctx.lineTo(70, 45);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(100, 20, 100, 50);
+        ctx.fillStyle = 'pink';
+        ctx.beginPath();
+        ctx.moveTo(150, 70);
+        ctx.lineTo(150, 100);
+        ctx.moveTo(150, 100);
+        ctx.lineTo(100, 150);
+        ctx.moveTo(150, 100);
+        ctx.lineTo(200, 150);
+        ctx.moveTo(200, 150);
+        ctx.lineTo(100, 150);
+        ctx.moveTo(230, 45);
+        ctx.lineTo(200, 45);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fillStyle = 'grey';
+        ctx.beginPath();
+        ctx.arc(260, 45, 30, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(320, 45);
+        ctx.lineTo(290, 45);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.fillStyle = 'red';
+        // ctx.rotate();//ctx.rotate(50 * Math.PI / 180);
+        ctx.save();
+        ctx.rotate(22 * Math.PI / 90);
+        ctx.transform(1, .2, .2, 1, 0, 0);
+        ctx.translate(-10, -320);
+        ctx.fillRect(320, 20, 50, 50);
+        ctx.beginPath();
+        ctx.moveTo(400, -10);
+        ctx.lineTo(370, 20);
+        ctx.closePath();
+        ctx.stroke();
+        const image = document.getElementById('pyramid');
+        image.addEventListener('load', e => {
+            //ctx.rotate(40 * Math.PI / 90);
+            //ctx.translate(-30, -400);
+            ctx.drawImage(image, 400, -40, 100, 100);
+        })
+            //ctx.strokeRect(400, -40, 100, 50);
+
+
+        //ctx.restore();
+        //ctx.fillRect(320, 20, 50, 50);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

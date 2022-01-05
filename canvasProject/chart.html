@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="square" width="150" height="300"></canvas>
+    <canvas id="rectangle" width="150" height="300"></canvas>
+    <canvas id="circle" width="150" height="300"></canvas>
+    <canvas id="rhombus" width="150" height="300"></canvas>
+    <canvas id="image" width="150" height="300"></canvas>
+    <script>
+        var ctx = document.getElementById('square').getContext('2d');
+        ctx.fillStyle = 'skyblue';
+        ctx.fillRect(10, 100, 80, 80);
+        ctx.beginPath();
+        ctx.moveTo(150, 140);
+        ctx.lineTo(90, 140);
+        ctx.closePath();
+        ctx.stroke();
+
+        //ctx.fillText(square, 10, 30, 50);
+        var ctx = document.getElementById('rectangle').getContext('2d');
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(0, 110, 100, 50);
+        //var ctx = document.getElementById('rhombus').getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(150, 135)
+        ctx.lineTo(100, 135);
+        ctx.closePath();
+        ctx.stroke();
+        //ctx.fill();
+        //ctx.rotate(45 * Math.PI / 180);
+        //ctx.fillStyle = 'red';
+        //ctx.fillRect(75, 120, 120, 80);
+        //ctx.restore();
+
+        var ctx = document.getElementById('circle').getContext('2d');
+        ctx.fillStyle = 'grey';
+        ctx.beginPath();
+        ctx.arc(50, 140, 50, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(150, 140);
+        ctx.lineTo(100, 140);
+        ctx.closePath();
+        ctx.stroke();
+        var ctx = document.getElementById('rhombus').getContext('2d');
+        //ctx.save();
+        ctx.rotate(22 * Math.PI / 90);
+        ctx.transform(1, .2, .2, 1, 0, 0);
+        ctx.fillStyle = 'red';
+        ctx.fillRect(80, 0, 80, 80);
+        ctx.beginPath();
+        ctx.moveTo(150, 40);
+        ctx.lineTo(80, 40);
+        //ctx.restore();
+        //ctx.rotate(15 * Math.PI / 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
