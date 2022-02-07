@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p>This is my page</p>
+    <script>
+        let promise = fetch('https://1.bp.blogspot.com/-yOZXmrXTy4w/YRg8bcuVVoI/AAAAAAAAYiM/g24CuoISJQYhArbLahhy3501B-2rrnRnQCNcBGAsYHQ/s720/Beautiful%2BColorful%2BDay%2B%2526%2BNight%2Baesthetic%2Bsky%2Bwallpaper%2BDPs%2B%25281%2529.jpg');
+        response => response.blob();
+        let promise2 = promise.then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            } else {
+                return response.blob();
+            }
+        });
+        let promise3 = promise2.then(myBlob => {
+            let objectURL = URL.createObjectURL(myBlob);
+            let image = document.createElement('img');
+            image.src = objectURL;
+            document.body.appendChild(image);
+        });
+        let errorCase = promise3.catch(e => {
+            console.log('There has been a problem with your fetch operation: ' + e.message);
+        });
+
+
+    </script>
+</body>
+
+</html>

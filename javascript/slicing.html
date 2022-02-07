@@ -1,0 +1,79 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <canvas id="images" width="150" height="150"></canvas>
+    <canvas id="images1" width="300" height="300"></canvas>
+    <canvas id="images2" width="300" height="300"></canvas>
+    <div style="display:none"></div>
+    <img id="source"
+        src="https://swall.teahub.io/photos/small/249-2492578_nature-status-and-quotes-for-whatsapp-most-beautiful.jpg"
+        width="300" height="227">
+    <img id="frame"
+        src="https://www.lombardodier.com/files/live/sites/loportail/files/news/2021/May/20210521/Nature_LOcom.jpg"
+        width="132" height="150">
+
+
+
+    <script>
+        // using image constructor 
+        var img1 = new Image();
+        img1.src = 'https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max';
+        img1.width = 150;
+        img1.height = 150;
+
+        document.body.appendChild(img1);
+        //using DOM HTML element
+
+        var img2 = document.createElement('img');
+        img2.src = 'https://images.news18.com/ibnlive/uploads/2021/07/1627377451_nature.jpg';
+        img2.width = 150;
+        img2.height = 150;
+        document.body.appendChild(img2);
+        //using first image in the document
+        //alert(document.images[0].src);
+
+        function draw() {
+            var ctx = document.getElementById('images').getContext('2d');
+            var img3 = new Image();
+            img3.width = 150;
+            img3.height = 150;
+            img3.onload = function () {
+                ctx.drawImage(img3, 30, 30);
+            };
+            img3.src = 'https://static.boredpanda.com/blog/wp-content/uploads/2018/05/perfectly-timed-photos-right-moment-4-5b0d0e8a0cb6b__605.jpg';
+
+        }
+        draw();
+        //scaling
+        var ctx = document.getElementById('images1').getContext('2d');
+        var img4 = new Image();
+        img4.onload = function () {
+            for (var i = 0; i < 14; i++) {
+                for (var j = 0; j < 13; j++) {
+                    ctx.drawImage(img4, j * 50, i * 38, 50, 50);
+                }
+            }
+        };
+        img4.src = 'https://media.istockphoto.com/photos/sunset-with-pebbles-on-beach-in-nice-france-picture-id1157205177?k=20&m=1157205177&s=612x612&w=0&h=bmCFFtaLRtF_eYhjZ3FkhPXU3X-yrdvr85xvl2CmQ9g=';
+
+        var ctx = document.getElementById('images2').getContext('2d');
+        //draw slice
+        ctx.drawImage(document.getElementById('source'), 33, 71, 104, 124, 21, 20, 87, 104);
+        //draw frame
+        ctx.drawImage(document.getElementById('frame'), 0, 0);
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

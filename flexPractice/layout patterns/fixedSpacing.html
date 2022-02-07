@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <style>
+        /*stretch all,fixed spacing
+        1=>display:flex on conatiner and 2=>flex-grow value as 0 on children*/
+        body {
+            background-color: cornflowerblue;
+        }
+
+        .container {
+            display: flex;
+
+        }
+
+        .item {
+            flex-grow: 1;
+            background-color: cyan;
+            height: 200px;
+            padding: 1em;
+            margin: .6em;
+        }
+
+        .item+.item {
+            margin-left: 2%;
+        }
+
+        .item1 {
+            flex-grow: 2;
+            background-color: cyan;
+            height: 100px;
+            padding: 1em;
+            margin: .6em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit repellendus earum aperiam
+            non? Itaque asperiores, cum rem laudantium dolorum, voluptatum eius eos iste harum ducimus praesentium!
+            Ipsum deserunt architecto excepturi!</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem officiis suscipit
+            porro nam dolorem sunt earum velit quod ullam, atque repellat reiciendis inventore cupiditate, ipsam
+            incidunt! Consequuntur quaerat ducimus perspiciatis.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum doloribus officiis ab,
+            architecto incidunt in recusandae mollitia maiores sed qui quia necessitatibus eligendi. Doloribus
+            voluptatum optio fugiat tenetur dicta soluta.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos et, sed magnam libero at labore.
+            Nostrum ipsa fugiat commodi neque molestias. Culpa asperiores nam adipisci dolores commodi voluptas,
+            doloremque ratione!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae eveniet quod
+            consequatur debitis quas distinctio voluptas odio. Ipsum quod mollitia perferendis, soluta illum
+            necessitatibus sint dolor quibusdam eligendi exercitationem.</div>
+    </div>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item1"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+
+    </div>
+</body>
+
+</html>

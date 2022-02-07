@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <canvas id="double"></canvas>
+    
+    <script>
+        var ctx = document.getElementById('double').getContext('2d');
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, 0, 50, 50);
+        ctx.beginPath();
+        ctx.moveTo(80, 25);
+        ctx.lineTo(50, 25);
+        //ctx.moveTo(70,25);
+        //ctx.lineTo(60,25);
+        //ctx.moveTo(80,25);
+        //ctx.lineTo(70,25);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(80, 0, 100, 50);
+        ctx.beginPath();
+        ctx.moveTo(210, 25);
+        ctx.lineTo(180, 25);
+        ctx.closePath();
+        ctx.stroke();
+        //ctx.beginPath();
+        //ctx.moveTo(160,80);
+        //ctx.lineTo(130,80);
+        //ctx.closePath();
+        //ctx.stroke();
+        ctx.fillStyle = 'grey';
+        ctx.beginPath();
+        ctx.arc(240, 30, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(300, 25);
+        ctx.lineTo(270, 25);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fillStyle = 'red';
+        ctx.fillRect(310, 0, 50, 50);
+
+        
+
+
+
+        //ctx.fillStyle = 'red';
+        //ctx.fillRect(60, 0, 50, 50);*/
+
+    </script>
+</body>
+
+</html>

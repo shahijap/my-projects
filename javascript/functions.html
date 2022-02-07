@@ -1,0 +1,96 @@
+<html>
+
+<head>
+
+    <style>
+        .msgBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            background: #eee;
+        }
+
+        .msgBox p {
+            line-height: 1.5;
+            padding: 10px 20px;
+            color: #333;
+        }
+
+        .msgBox button {
+            background: none;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.1rem;
+            color: #aaa;
+
+        }
+        input,p {
+            font-size: 2em;
+            margin: 10px 1px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button>display message</button>
+    <script>
+        function displayMessage(msgText, msgType) {
+            const btn = document.querySelector('button');
+            btn.addEventListener('click', () => displayMessage('Woo,this is a different message!'));
+            const html = document.querySelector('html');
+            const panel = document.createElement('div');
+            panel.setAttribute('class', 'msgbox');
+            html.appendChild(panel);
+            const msg = document.createElement('p');
+            msg.textContent = msgText;
+            panel.appendChild(msg);
+            const closeBtn = document.createElement('button');
+            closeBtn.textContent = 'x';
+            panel.appendChild(closeBtn);
+            closeBtn.addEventListener('click', () => panel.parentNode.removeChild(panel));
+
+        }
+        displayMessage();
+    </script>
+
+    
+    <input class="numberInput" type="text">
+    <p></p>
+    <script>
+        const input = document.querySelector('.numberInput');
+        const para = document.querySelector('p');
+        function squared(num) {
+            return num * num;
+        }
+        function cubed(num) {
+            return num * num * num;
+        }
+        function factorial(num) {
+            if (num < 0) return undefined;
+            if (num == 0) return 1;
+            let x = num-1;
+            while(x > 1) {
+                num *= x;
+                x--;
+            }
+            return num;
+        }
+        input.addEventListener('change', () => {
+            const num = parseFloat(input.value);
+            if (isNaN(num)) {
+                para.textContent = 'you need to enter a number!';
+            }else {
+                para.textContent = ` ${num} squared is ${squared(num)}.`;
+                para.textContent += ` ${num} cubed is ${cubed(num)}.`;
+                para.textContent += `${num} factorial is ${factorial(num)}.`;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

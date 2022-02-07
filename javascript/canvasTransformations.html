@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <style>
+        canvas {
+            border: 2px solid purple;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="transformation" width="150" height="150"></canvas>
+    <canvas id="translate" width="150" height="150"></canvas>
+    <canvas id="rotate" width="300" height="200"></canvas>
+    <canvas id="scaling" width="150" height="200"></canvas>
+    <canvas id="transform" width="300" height="200"></canvas>
+    <canvas id="clip" width="150" height="150"></canvas>
+
+
+    <script>
+        function draw() {
+            var ctx = document.getElementById('transformation').getContext('2d');
+
+            ctx.fillRect(0, 0, 150, 150);   // Draw a rectangle with default settings
+            ctx.save();                  // Save the default state
+
+            ctx.fillStyle = '#09F';      // Make changes to the settings
+            ctx.fillRect(15, 15, 120, 120); // Draw a rectangle with new settings
+
+            ctx.save();                  // Save the current state
+            ctx.fillStyle = '#FFF';      // Make changes to the settings
+            ctx.globalAlpha = 0.5;
+            ctx.fillRect(30, 30, 90, 90);   // Draw a rectangle with new settings
+
+            ctx.restore();               // Restore previous state
+            ctx.fillRect(45, 45, 60, 60);   // Draw a rectangle with restored settings
+
+            ctx.restore();               // Restore original state
+            ctx.fillRect(60, 60, 30, 30);   // Draw a rectangle with restored settings
+
+            var ctx = document.getElementById('translate').getContext('2d');
+            for (var i = 0; i < 3; i++) {
+                for (var j = 0; j < 3; j++) {
+                    ctx.save();
+                    ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+                    ctx.translate(10 + j * 50, 10 + i * 50);
+                    ctx.fillRect(0, 0, 25, 25);
+                    ctx.restore();
+                }
+            }
+
+            var ctx = document.getElementById('rotate').getContext('2d');
+
+
+            // left rectangles, rotate from canvas origin
+            ctx.save();
+            // blue rect
+            ctx.fillStyle = '#0095DD';
+            ctx.fillRect(30, 30, 100, 100);
+            ctx.rotate((Math.PI / 180) * 25);
+            // grey rect
+            ctx.fillStyle = '#4D4E53';
+            ctx.fillRect(30, 30, 100, 100);
+            ctx.restore();
+
+            // right rectangles, rotate from rectangle center
+            // draw blue rect
+            ctx.fillStyle = '#0095DD';
+            ctx.fillRect(150, 30, 100, 100);
+
+            ctx.translate(200, 80); // translate to rectangle center
+            // x = x + 0.5 * width
+            // y = y + 0.5 * height
+            ctx.rotate((Math.PI / 180) * 25); // rotate
+            ctx.translate(-200, -80); // translate back
+
+            // draw grey rect
+            ctx.fillStyle = '#4D4E53';
+            ctx.fillRect(150, 30, 100, 100);
+        }
+        draw();
+
+        var ctx = document.getElementById('scaling').getContext('2d');
+        // draw a simple rectangle, but scale it.
+        ctx.save();
+        ctx.scale(10, 3);
+        ctx.fillRect(1, 10, 10, 10);
+        ctx.restore();
+
+        // mirror horizontally
+        ctx.scale(-1, 1);
+        ctx.font = '48px serif';
+        ctx.fillText('GYPSY', -135, 120);
+
+        var ctx = document.getElementById('transform').getContext('2d');
+        //function draw() {
+
+        var sin = Math.sin(Math.PI / 6);
+        var cos = Math.cos(Math.PI / 6);
+        ctx.translate(100, 100);
+        var c = 0;
+        for (var i = 0; i <= 12; i++) {
+            c = Math.floor(255 / 12 * i);
+            ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+            ctx.fillRect(0, 0, 100, 10);
+            ctx.transform(cos, sin, -sin, cos, 0, 0);
+        }
+
+        ctx.setTransform(-1, 0, 0, 1, 100, 100);
+        ctx.fillStyle = 'rgba(255, 112, 255, 0.5)';
+        ctx.fillRect(0, 50, 100, 100);
+        // }
+        //clip example
+
+        var ctx = document.getElementById('clip').getContext('2d');
+        ctx.fillRect(0, 0, 150, 150);
+        ctx.translate(75, 75);
+
+        // Create a circular clipping path
+        ctx.beginPath();
+        ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
+        ctx.clip();
+
+        // draw background
+        var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
+        lingrad.addColorStop(0, '#232256');
+        lingrad.addColorStop(1, '#143778');
+
+        ctx.fillStyle = lingrad;
+        ctx.fillRect(-75, -75, 150, 150);
+
+        // draw stars
+        for (var j = 1; j < 50; j++) {
+            ctx.save();
+            ctx.fillStyle = '#fff';
+            ctx.translate(75 - Math.floor(Math.random() * 150),
+                75 - Math.floor(Math.random() * 150));
+            drawStar(ctx, Math.floor(Math.random() * 4) + 2);
+            ctx.restore();
+        }
+
+
+
+        function drawStar(ctx, r) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(r, 0);
+            for (var i = 0; i < 9; i++) {
+                ctx.rotate(Math.PI / 5);
+                if (i % 2 === 0) {
+                    ctx.lineTo((r / 0.525731) * 0.200811, 0);
+                } else {
+                    ctx.lineTo(r, 0);
+                }
+            }
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+        }
+
+
+
+    </script>
+</body>
+
+</html>

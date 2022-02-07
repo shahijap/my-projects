@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background: 0 -100px repeat-x palegreen;
+            margin: 10px;
+        }
+
+        img {
+            display: none;
+            
+           
+            
+        }
+        
+
+        table {
+            margin: 0 auto;
+        }
+
+        td {
+            padding: 15px;
+        }
+    </style>
+
+</head>
+
+
+
+<body onload="draw();">
+    <table>
+        <tr>
+            <td><img src="https://i.pinimg.com/736x/ea/12/ec/ea12ecda73b133b2b1e3f84fb9cbcc19.jpg"></td>
+            <td><img src="https://leverageedu.com/blog/wp-content/uploads/2021/01/Madhubhani-Paintings-809x1024.png"></td>
+            <td><img src="https://www.tfod.in/UserProfileImages/ArticleImage/bMirj9JD26fd85b7_6.jpg"></td>
+            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Tk4oYRV0uHmKc-iWQoxVPzA2u0_mSH8xrP8nnAOG2hQVXv27fokI9ZIlhakbzUcxYy0&usqp=CAU"></td>
+        </tr>
+        <tr>
+            <td><img src="https://images.ctfassets.net/y2oap0mhvrps/4ImhokZBz8zFsgaLi1L1Qp/ed9413d9edaa32eca69b82c84928a972/Warli-Art.jpg?h=300"></td>
+            <td><img src="https://i.pinimg.com/736x/63/ed/6c/63ed6c0deef75c7bc8eeaf5985f8093a.jpg"></td>
+            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_r_swX0HwMKPDefEv-ot8bVezBWQXEp20TA&usqp=CAU"></td>
+            <td><img src="https://media.istockphoto.com/vectors/paper-cut-tree-vector-id186608290?s=612x612"></td>
+        </tr>
+    </table>
+    <img id="frame" src="https://miro.medium.com/max/1400/1*7jyCfaMti_TyKVFc7rqBgA.jpeg" width="100" height="100">
+    <script>
+        function draw() {
+
+            // Loop through all images
+            for (var i = 0; i < document.images.length; i++) {
+
+                // Don't add a canvas for the frame image
+                if (document.images[i].getAttribute('id') != 'frame') {
+
+                    // Create canvas element
+                    canvas = document.createElement('canvas');
+                    canvas.setAttribute('width', 150);
+                    canvas.setAttribute('height', 150);
+
+                    // Insert before the image
+                    document.images[i].parentNode.insertBefore(canvas, document.images[i]);
+
+                    ctx = canvas.getContext('2d');
+
+                    // Draw image to canvas
+                    ctx.drawImage(document.images[i], 15, 20);
+
+                    // Add frame
+                    //ctx.drawImage(document.getElementById('frame'), 0, 0);
+                }
+            }
+        }
+        
+
+    </script>
+
+</body>
+
+
+</html>

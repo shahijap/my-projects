@@ -1,83 +1,68 @@
 <html>
 
 <head>
-    <style>
-        canvas {
-            border: 1px solid black;
-        }
-    </style>
 
 </head>
 
 <body>
-    <canvas id="square" width="150" height="300"></canvas>
-    <canvas id="rectangle" width="150" height="300"></canvas>
-    <canvas id="circle" width="150" height="300"></canvas>
-    <canvas id="rhombus" width="150" height="300"></canvas>
-    <canvas id="image" width="150" height="300"></canvas>
+    <canvas id="canvas" width="1500" height="800">
+        <img src='https://sites.google.com/site/3dtriangularpyramid/_/rsrc/1467888693304/home/20080724-IMG_3237.jpg?height=377&width=683'
+            width="100" ,height="100" id="pyramid">
+    </canvas>
     <script>
-        var ctx = document.getElementById('square').getContext('2d');
+        var ctx = document.getElementById('canvas').getContext('2d');
         ctx.fillStyle = 'skyblue';
-        ctx.fillRect(10, 100, 80, 80);
+        //ctx.fillText('square', 150, 150);
+        ctx.fillRect(100, 100, 100, 100);
         ctx.beginPath();
-        ctx.moveTo(150, 140);
-        ctx.lineTo(90, 140);
+        ctx.moveTo(200, 150);
+        ctx.lineTo(240, 150);
         ctx.closePath();
         ctx.stroke();
-
-        //ctx.fillText(square, 10, 30, 50);
-        var ctx = document.getElementById('rectangle').getContext('2d');
         ctx.fillStyle = 'blue';
-        ctx.fillRect(0, 110, 100, 50);
-        //var ctx = document.getElementById('rhombus').getContext('2d');
+        ctx.fillRect(240, 100, 200, 100);
+        ctx.fillStyle = 'pink';
         ctx.beginPath();
-        ctx.moveTo(150, 135)
-        ctx.lineTo(100, 135);
+        ctx.moveTo(440, 150);
+        ctx.lineTo(480, 150);
+        ctx.moveTo(340, 200);//line to triangle
+        ctx.lineTo(340, 240);
+        ctx.moveTo(340, 240);//triangle
+        ctx.lineTo(240, 300);
+        ctx.lineTo(440, 300);
+        ctx.fill();
         ctx.closePath();
         ctx.stroke();
-        //ctx.fill();
-        //ctx.rotate(45 * Math.PI / 180);
-        //ctx.fillStyle = 'red';
-        //ctx.fillRect(75, 120, 120, 80);
-        //ctx.restore();
-
-        var ctx = document.getElementById('circle').getContext('2d');
         ctx.fillStyle = 'grey';
         ctx.beginPath();
-        ctx.arc(50, 140, 50, 0, Math.PI * 2);
+        ctx.arc(530, 150, 50, 0, 2 * Math.PI);
         ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = 'red';
         ctx.beginPath();
-        ctx.moveTo(150, 140);
-        ctx.lineTo(100, 140);
+        ctx.moveTo(580, 150);
+        ctx.lineTo(620, 150);
+        ctx.moveTo(620, 150);//rhombus
+        //ctx.lineTo(620,200);
+        ctx.lineTo(660, 100);
+        ctx.moveTo(660, 100);
+        ctx.lineTo(700, 150);
+        ctx.moveTo(700, 150);
+        ctx.lineTo(660, 200);
+        ctx.moveTo(660, 200);
+        ctx.lineTo(620, 150);//rhombus drawn
+        ctx.fill();
         ctx.closePath();
         ctx.stroke();
-        var ctx = document.getElementById('rhombus').getContext('2d');
-        //ctx.save();
-        ctx.rotate(22 * Math.PI / 90);
-        ctx.transform(1, .2, .2, 1, 0, 0);
-        ctx.fillStyle = 'red';
-        ctx.fillRect(80, 0, 80, 80);
         ctx.beginPath();
-        ctx.moveTo(150, 40);
-        ctx.lineTo(80, 40);
-        //ctx.restore();
-        //ctx.rotate(15 * Math.PI / 2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ctx.moveTo(700, 150);
+        ctx.lineTo(740, 150);
+        ctx.closePath();
+        ctx.stroke();
+        const image = document.getElementById('pyramid');
+        image.addEventListener('load', e => {
+            ctx.drawImage(image, 740, 100, 100, 100);
+        })
     </script>
 </body>
 

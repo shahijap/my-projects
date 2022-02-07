@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <style>
+        body {
+            width: 50%;
+            margin: 1em auto;
+            border: 2px solid #bdbdbd;
+            padding: 50px;
+            font-size: 1em;
+            box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+        }
+
+        .parent {
+            display: grid;
+            grid-gap: 1em;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 200px 200px 200px 500px;
+
+        }
+        .a {
+            text-align: center;
+            background-image: url("https://media.istockphoto.com/vectors/abstract-design-creativity-background-of-blue-sea-waves-vector-vector-id475845856?k=20&m=475845856&s=612x612&w=0&h=5klQ1awKadQUV1_-wfWnVAFlOyUbDDbATc5oB3Y1JWI=");
+            background-size: cover;
+            
+        }
+        .month {
+            text-transform: uppercase;
+            font-size: xx-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #1A237E;
+            margin-top: 20%;
+        }
+        .date {
+            margin : 0;
+            font-size: 72px;
+            color: #212121;
+         }
+
+        .c {
+            background-image: url("https://media.istockphoto.com/photos/surfboard-on-sand-tropical-beach-picture-id1148552419?k=20&m=1148552419&s=612x612&w=0&h=NJSaHry6p38vMv7G8D0WG80GHyNjFt2MML0zZp0IP5M=");
+            background-size: cover;
+        }
+
+        .b {
+            grid-column: 2;
+            grid-row: 1 / 3;
+            background-image: url("https://images.unsplash.com/photo-1600115010857-edbbc7e1efb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3VucmlzZSUyMGJlYWNofGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+            background-size: cover;
+        }
+
+        .d {
+            grid-column: 1 / 3;
+            background-image: url("https://cdn4.vectorstock.com/i/1000x1000/13/23/tropical-beach-and-wave-blue-sea-background-vector-20861323.jpg");
+            background-size: contain;
+            text-align: center;
+            font-size: 72px;
+            text-transform: uppercase;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #770187;
+            
+        }
+        h1 {
+            grid-column: 1 / 3;
+            text-align: center;
+            text-transform: capitalize;
+            color: #3700b3;
+            }
+        section {
+            grid-column: 1 / 3;
+            grid-row: 4;
+            background-image: url("https://ae01.alicdn.com/kf/Hcbc5775144d04c498bd9b398755e747f5/Ocean-Beach-Wave-Metal-Cutting-Dies-Special-Background-Stencil-Decorative-Craft-For-DIY-Scrapbooking.jpg_Q90.jpg_.webp");
+            background-size: contain;
+            font-size: large;
+            
+            padding: 20px;
+           }
+        header {
+            color: #6b5b95;
+            text-transform: capitalize;
+            font-size: 45px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        footer {
+            color: #6b5b95;
+        }
+        ul {
+            color: #770187;
+            font-size: 24px;
+            line-height: 38.4px;
+            list-style-type: none;
+            text-align: center;
+            font-weight: 800;
+            margin: auto;
+            width: 80%;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="a">
+            <div class="month">july</div>
+            <div class="month date">31</div>
+        </div>
+        
+
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="d">surf, sun & beach party</div>
+       <section>
+            <header>huntington beach pier 7pm - 10pm</header>
+
+            <ul>
+                <li>Open from 5 am to 10 pm,</li><li>City Beach provides ample parking in lots north and south of the
+                    Huntington</li>
+                   <li> Beach Pier for $2.00 per hour with a $15 daily maximum.</li>
+                
+                
+                
+            </ul>
+
+            <footer>no_reply@example.com</footer>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

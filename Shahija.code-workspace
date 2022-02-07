@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "canvasProject"
+		},
+		{
+			"path": "CSS"
+		},
+		{
+			"path": "db"
+		},
+		{
+			"path": "flexPractice"
+		},
+		{
+			"path": "html_project"
+		},
+		{
+			"path": "javascript"
+		},
+		{
+			"path": "typescript-node-api"
+		}
+	]
+}

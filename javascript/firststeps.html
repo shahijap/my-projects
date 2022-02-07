@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <style>
+        p {
+            background-color: aquamarine;
+            border: 2px solid #424242;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 1em auto;
+            text-transform: uppercase;
+            padding: 10px;
+            color: chocolate;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const para = document.querySelector('p');
+
+            para.addEventListener('click', updateName);
+
+            function updateName() {
+                const name = prompt('enter a new name');
+                para.textContent = `player 1: ${name}`;
+            }
+            function createParagraph() {
+                const para = document.createElement('p');
+                para.textContent = 'you clicked the paragraph!';
+                document.body.appendChild(para);
+            }
+            const buttons = document.querySelectorAll('button');
+            for (const button of buttons) {
+                button.addEventListener('click', createParagraph);
+                button.addEventListener('click', () => {
+                    const para = document.createElement('p');
+                    para.textContent = 'you clicked the paragraph!';
+                    document.body.appendChild(para);
+                });
+            }
+
+        });
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <p>player 1: chris</p>
+    <button>click me</button>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script>
+        class person {
+            constructor(first, last, age, gender, interests) {
+                this.name = {
+                    first, last
+                };
+                this.age = age;
+                this.gender = gender;
+                this.interests = interests;
+            }
+            // class methods
+            greeting() {
+                alert(`Hi! I'm ${this.name.first}`);
+            };
+            farewell() {
+                alert(`${this.name.first} has left the building. Bye for now!`);
+            };
+        }
+        let person1 = new person('keerthi', 'suresh', 23, 'female', ['music', 'swimming']);
+        person1.greeting();
+        let person2 = new person('rakul', 'preet', 24, 'female', ['art', 'skiing']);
+        person2.farewell();
+        class teacher extends person {
+            constructor(first, last, age, gender, interests, subject, grade) {
+                super(first, last, age, gender, interests);
+                this._subject = subject;
+                this.grade = grade;
+            }
+            get subject() {
+                return this._subject;
+            }
+            set subject(newSubject) {
+                this._subject = newSubject;
+            }
+        }
+        let teacher1 = new teacher('lokesh', 'reddy', 27, 'male', ['reading books', 'browsing net'], 'mathematics', 10);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
