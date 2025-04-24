@@ -1,0 +1,13 @@
+Miscellaneous Topics:
+1. Truthy and falsy values
+2. Primitive and Reference Data Types
+3. Deep copy and shallow copy
+4. Closures
+5. Currying
+6. Null vs undefined vs Not defined
+7. type of Operator and Array.isArray method
+
+a. primitive and Reference data types:
+    1. numbers, strings, null, boolean, undefined --> all comes primitive bcz these are immutable and these are created in stack memory(values of varibles are fixed)
+    2. objects, arrays, functions --> all comes under reference bcz these are mutable and these are created in heap memory
+        in reference datatypes both(stack and heap memories are allocated) here varible values stored as a poniter locating obj in heap memory.

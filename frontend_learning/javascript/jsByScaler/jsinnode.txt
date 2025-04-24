@@ -1,0 +1,11 @@
+What is Node.js?
+1. Node.js is an open source, cross platform(it is available in every development platform), back-end javascript runtime environment that runs on the V8 engine and executes javascript code outside the browser, which was developed to build scalable network applications.
+2. It was developed by Ryan Dahl(in 2009 and made it to use in local machine) and it uses Chromes's V8 engine.
+3. Node.js is an open source, cross-platform run time environment for developing server-side and networking applications. Node.js applications are written in javascript, and can be run within the Node.js runtime on OS X,
+Microsoft Windows, and Linux.
+4. we can run node in cmd as well
+    1. Type node (gives welcome msg).
+    2. Type the commanda you want to execute.
+5. we can run js in local machine using node.
+    1. go to terminal 
+    2. Type the command --> node <js file name> ex: (node script.js)

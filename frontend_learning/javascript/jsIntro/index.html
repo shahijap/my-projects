@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>JAVASCRIPT BASICS</h1>
+    <p id="demo">Javascript can change HTML content.</p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello! Javascript'">Click Me</button>
+    <p>Javascript can change HTML attributes.</p>
+    <button type="button" onclick="document.getElementById('getimage').src='../bellOn.png'">Click me to on the bell.</button>
+    <img id="getimage"src="../bellOff.png" width="100px" height="100px">
+    <button type="button" onclick="document.getElementById('getimage').src = '../bellOff.png'">Click me to off the bell.</button>
+    <p id="color">Javascript can change HTML styles</p>
+    <button type="button" onclick="document.getElementById('color').style.color = 'red'">Click me to change the color of paragraph.</button>
+    <p id="show" style="display: none;">Javascript can show the element.</p>
+    <button type="button" onclick="document.getElementById('show').style.display = 'block'" style="display: block; margin: 10px 0px">Click me to show the element</button>
+    <p id="hide">Javascript can hide the element.</p>
+    <button type="button" onclick="document.getElementById('hide').style.display = 'none'" style="display: block; margin: 10px 0px;">Click me to hide the element</button>
+
+</body>
+</html>

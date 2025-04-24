@@ -1,0 +1,38 @@
+What is synchronous and asynchronous programming?
+1. Synchronous programming means it will use a single-threaded, so only one operation or program will run at a time
+2. Sync is blocking - it will only send the server one request at a time and will wait for that request to be answered by the server.
+3. Asynchronous is non-blocking, which means it will send multiple requests to a server at a time.
+4. Async increases throughput because multiple operations can run at the same time.
+5. In a single thread: (synchronous)
+    1. fn(10s)
+    2. fn(15s)
+    3. fn(5s)
+    overall it takes to execute the function is 30s.
+6. In a multi thread: (asynchronous)
+    1. fn(10s)
+    2. fn(15s)
+    3. fn(5s)
+    all functions execute parallelly and over all time it takes is 15s which is the max time taken by function in the thread.
+7. asynchronous more faster compare to synchronous in terms of performance.
+
+Topics:
+1. What is Async programming
+2. Callbacks (setTimeout, setInterval etc)
+3. callback queue and event loop
+4. Promises
+5. async/await
+6. microtask queue
+7. Sequential and Parallel execution of code.
+
+a. async javascript:
+    1. call stack, node api, eventloop, call back queue all together will give async behaviour inside javascript.
+
+b. promises:
+    1. pending 
+    2. fulfilled -> get resolved promise with then method 
+    3. rejected -> get rejected promise with catch method 
+    4. settled
+c. micro task queue order:
+    1. promises
+    2. callbacks
+    3. microtask queue have high priority than task queue

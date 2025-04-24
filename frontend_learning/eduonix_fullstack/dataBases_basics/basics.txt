@@ -1,0 +1,186 @@
+1. MongoDB and MYSQL (relational vs non-relational databases).
+2. Mysql -> relational database, MongoDB -> Non relational database.
+3. RELATIONAL DATABASES:
+    a. Relational databases store data in tables which have rows(single point entry) and columns(descriptive of that data)
+    b. Tables are related to each other through key relationships.
+4. NON-RELATIONAL DATABASES:
+    a. Stores data in objects instead of tables
+    b. Various types including:
+        1. Document data Stores
+        2. key-value Stores
+        3. Graph databases
+5.MYSQL
+    a. Creating database and table
+    1. Create database shop;
+    2. Create table products (
+        product_id varchar(100),
+        product_name varchar(100),
+        price numeric(7, 2), --> here 7 is value in range and 2 is the decimal value range after the decimal.
+    );
+    b. inserting data 
+       1. Single Insert:
+        Insert into products(product_id, product_name, price)
+        values('100', 'Desktop Computer', 500.25);
+       2. Bulk Insert:
+        Insert into products(product_id, product_name, price)
+        values('100', 'Desktop Computer', 10000.25),
+        ('101', 'keyboard', 5000.25),
+        ('102', 'mouse', 500.25);
+    c. selects and filters:
+        1. select: (get data from database)
+            select * from products; --> get every single column from the products database
+            select product_id from products; -> get specific column from the products database
+        2. Filter: (to get records that match the condition)
+            select * from products where product_id = '100'
+            select * from products where product_id = '100' and product_name = 'Desktop Computer'; -> return the recods that satisfy both conditions
+            select * from products where product_id = '100' or product_name = 'Desktop Computer'; -> return the records that satisfy any of the condition.
+    d. primary and foreign keys:
+        1. Primary key is something that should be unique and not null.
+        2. To relate one table to another table we need to have a similarity between two tables would be primary key.
+        3. If we have a column that references another table primary key called as foreign key.
+        4. If a key in one table references the key in another table that is called as foreign key relationship.
+        5. create table orders (
+            order_id varchar(100),
+            product_id varchar(100),
+            primary key(order_id),
+            foreign key(product_id) references products(product_id)
+            );
+        6. Insert into orders values('1', '1'), ('2', '2') --> it specifies that inserting values into all columns
+    e. Joins:
+        1. Combine the tables that have relationship between each if them.
+        2. select * from orders inner join products -> inner join finds all records that are same between orders and products on some condition
+        3. select * from orders inner join products on products.product_id = orders.product_id
+        4. select * from orders left join products on products.product_id = orders.product_id -> left join gets everything from orders table and all products that match product id (matching records from products).
+        5. select * from orders right join products on products.product_id = orders.product_id -> right join gets everything from products table and matching records from orders table
+
+6. MongoDB setup: 
+    1. first install mongodb server from browser.
+    2. Then in node folder run -> npm i mongodb.
+    3. in indexjs create a set up for mongodb -> in mongodb data is stored as a collection
+        // steps:
+        var MongoClient = require('mongodb').MongoClient;
+        var url = 'mongodb://localhost:27017/mydb'; -> here mydb is database name
+        MongoClient.connect(url, function(err, db) {
+            //db is to establish a connection
+            if (err) throw err;
+            console.log('connected!');
+            db.close();
+        })
+    4. Creating a collection in mongodb
+        var MongoClient = require('mongodb').MongoClient;
+        var url = 'mongodb://localhost:27017/';
+        MongoClient.connect(url, function(err, db) {
+            var dbo = db.db("mydb");
+            dbo.createCollection("products", function(err, db) {
+                if (err) throw err; 
+                console.log('created collection!');
+                db.close();
+            });
+        })
+    5. database is a container for tables in relational databases.
+    6. for non-relational databases which is a container for collections
+    7. Inserting data: -> we inserted data as json objects
+     var MongoClient = require('mongodb').MongoClient;
+        var url = 'mongodb://localhost:27017/';
+        MongoClient.connect(url, function(err, db) {
+            if (err) throw err;
+            var dbo = db.db("mydb");
+            var myObj = { name: 'desktop computer', price: 650000 };
+            dbo.collection("products").insertOne(myObj, function(err, res) {
+                if (err) throw err; 
+                console.log('One Document inserted!');
+                db.close();
+            });
+        })
+    8. To insert many values:
+        var MongoClient = require('mongodb').MongoClient;
+        var url = 'mongodb://localhost:27017/';
+        MongoClient.connect(url, function(err, db) {
+            if (err) throw err;
+            var dbo = db.db("mydb");
+            var objList = [{ name: 'keyboard', price: '5000'}, { name: 'mouse', price: '1000' }];
+            dbo.collection("products").insertMany(objList, function(err, res) {
+                if (err) throw err;
+                console.log(res.insertedCount); --> it returns count from response
+                db.close();
+            });
+        })
+
+    7. Finding data(retrieving data) -> it fetches all data -> data comes with unique identified is as (_id with name and price)
+        1. var MongoClient = require('mongodb').MongoClient;
+        var url = 'mongodb://localhost:27017/';
+        MongoClient.connect(url, function(err, db) {
+            if (err) throw err;
+            var dbo = db.db("mydb");
+            dbo.collection("products").find({}).toArray(function(err, res) {
+                if (err) throw err;
+                console.log(res);
+                db.close();
+            });
+        })
+        2. var MongoClient = require('mongodb').MongoClient; 
+        var url = 'mongodb://localhost:27017/';
+        MongoClient.connect(url, function(err, db) {
+            if (err) throw err;
+            var dbo = db.db("mydb");
+            dbo.collection("products").find({}, {projection: {_id:0}}).toArray(function(err, res) {  --> with projection we are fetching specific ones with include(1) and exclude(0) , 0 means exclude field and 1 means include field
+                if (err) throw err;
+                console.log(res);
+                db.close();
+            });
+        })
+        3. var MongoClient = require('mongodb').MongoClient; 
+        var url = 'mongodb://localhost:27017/';
+        MongoClient.connect(url, function(err, db) {
+            if (err) throw err;
+            var dbo = db.db("mydb");
+            dbo.collection("products").find({}, {projection: {_id:0, name: 1, price: 1}}).toArray(function(err, res) { 
+                if (err) throw err;
+                console.log(res);
+                db.close();
+            });
+        })
+        4. To access particular value like and array we use:
+            var MongoClient = require('mongodb').MongoClient; 
+            var url = 'mongodb://localhost:27017/';
+            MongoClient.connect(url, function(err, db) {
+                if (err) throw err;
+                var dbo = db.db("mydb");
+                dbo.collection("products").find({}, {projection: {_id:0}}).toArray(function(err, res) { 
+                    if (err) throw err;
+                    console.log(res[0]); -> it give first result
+                    db.close();
+                });
+            })
+        5. To get specific property field we use:
+            var MongoClient = require('mongodb').MongoClient; 
+            var url = 'mongodb://localhost:27017/';
+            MongoClient.connect(url, function(err, db) {
+                if (err) throw err;
+                var dbo = db.db("mydb");
+                dbo.collection("products").find({}, {projection: {_id:0}}).toArray(function(err, res) { 
+                    if (err) throw err;
+                    console.log(res[0].name); -> it give first result name field
+                    db.close();
+                });
+            })
+         6. To filter data with specific values we use:
+            var MongoClient = require('mongodb').MongoClient; 
+            var url = 'mongodb://localhost:27017/';
+            MongoClient.connect(url, function(err, db) {
+                if (err) throw err;
+                var dbo = db.db("mydb");
+                dbo.collection("products").find({name: 'desktop computer'}, {projection: {_id:0}}).toArray(function(err, res) { 
+                    if (err) throw err;
+                    console.log(res[0].name); -> it give first result name field
+                    db.close();
+                });
+            })
+
+
+
+
+
+
+
+    

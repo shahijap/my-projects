@@ -1,0 +1,62 @@
+Object Oriented Javascript:
+1. Object-oriented programming is computer programming model that organizes software design around data or objects, rather than functions and logic. An object can be defined as a data field that has unique attrubutes and behaviour.
+2. The four pillars of OOPS are:
+Encapsulation, Abstraction, polymorphism, inheritance
+3. Javascript is not actually an object oriented programming language, but we can write object oriented code by using something called prototype object.
+
+OOPS Module:
+1. This Keyword
+2. Constructor functions
+3. Classes
+4. Classical inheritance
+5. Encapsulation
+6. polymorphism
+7. Prototype Object
+8. Prototypical inheritance
+9. Call Apply Bind
+
+a. The this keyword in Javascript
+    1. "This" keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function. If the function being referenced is a regular function, "this" references the global object. If the function that is being referenced is a method in an object, "this" references the object itself.
+    2. The Javascript "this" keyword is one of the most widely used keywords can seem complex at first, but once you start using "this" keyword, everything will become clear. 
+    3. Non-Strict 
+        1. node.js
+            a) console.log(this) -> {}
+            b) function -> global Object
+            c) obj -> fn -> object itself
+            d) obj -> fn -> fn -> global Object
+        2. Browser
+            a) console.log(this) -> window object
+            b) function -> window Object
+            c) obj -> fn -> object itself
+            d) obj -> fn -> fn -> window Object
+    4. Strict
+        1. node.js
+            a) console.log(this) -> {}
+            b) function -> undefined
+            c) obj -> fn -> object itself
+            d) obj -> fn -> fn -> undefined
+        2. Browser
+            a) console.log(this) -> window object
+            b) function -> undefined
+            c) obj -> fn -> object itself
+            d) obj -> fn -> fn -> undefined
+b. classical inheritance
+    1. Methods and properties from base class can be put down or can be passed into derived class.
+    2. parent {
+        properties
+    }  --> base class
+        child {
+            properties
+        } --> derived class
+    3. properties of parent class can be inherited to child class.
+c. polymorphism:
+    1. A behaviour to put on many methods.
+d. Prototype and Prototypal inheritance
+    1. object -> object prototype (has prebuilt methods and properties)
+    2. constructor -> person -> person prototype(custom prototype) -> object prototype (has prebuilt methods and properties/ built in prototype)
+    3. when we create multiple objects from person -> we can add a method in person prototype that will be used by other objects as well
+    4. Prototype Chaining (chain of links from one prototype to another prototype)
+        The methods are first searched by prototype that created by constructor 
+        then it if not find it search for it in object Prototype
+        even it not find it search in null container which is always null and throws error.
+    5. e.g., Person (constructor fn) -> Person1, Person2, Person3 -> have own/create method called greet() in person Prototype.

@@ -1,0 +1,7 @@
+What are Arrays?
+1. Similar to a variable an array also stores data but it can store multiple data items.
+2. It enables storing multiple values under a same variable name and we can also perform operations on them by using different methods and properties aslo every value gets a sequential index starting from 0.
+3. In javascript arrays can store values of different data types whereas in statically typed language arrays will store only that data by which the array is defined.
+
+Representing an Array?
+Array starts from index 0 by default and it goes upto the last element.

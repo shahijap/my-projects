@@ -1,0 +1,13 @@
+Introduction to javascript objects?
+1. In javascript, an object is an unordered collection of key-value pairs. Each key-value pairs is called a property.
+2. The key of a property can be a string. And the value of property can be any value, e.g.,a string, a number, an array, and even a function.
+3. Javascript provides you with many ways to create an object. The most commonly used one is to use the object literal notation.
+
+Initializing an object with object literal notation:
+1. Every other object in javascript describes a different entity with its properties.
+
+e.g., var person = {
+    firstName: 'shahija',
+    lastName: 'patnam',
+    age: 40
+};

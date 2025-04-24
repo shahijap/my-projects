@@ -1,0 +1,10 @@
+REACT OVERVIEW:
+1.React and React components
+2.Props and data lists.
+3.Hooks, states and useeffects
+4.How to interact between react and nodejs.
+
+1.React is a library that is used interact with nodejs to client through browser.
+2.it is a client based application that is able reacts to anything user does.
+3. npm init
+4. npx create-react-app my-react-app

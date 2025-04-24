@@ -1,0 +1,23 @@
+What are functions?
+1. A function is block of code that performs a specific task.
+2. A javascript function is executed when "something" invokes it(calls it). 
+3. Functions are one of the fundamental building blocks in javascript.
+4. A function in javascript is similar to a procedure -- a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.
+
+Declaring and invoking a function:
+
+function demo() {
+    console.log('hello');
+}  --> declaring a function
+demo()  --> invoking or calling a function
+
+Parameters and Arguments:
+
+1. A function can be defined with a set of parameters that it will take.
+2. parameters are generally the values that we want the function to accept.
+3. Arguments are the values that we pass for those parameters.
+
+function add(a, b){   // a, b are parameters
+    console.log(a + b);
+}
+add(2, 3) // arguments

@@ -1,0 +1,46 @@
+1. Once node js is installed go to the respective folder and give --> npm init (it creates package data)
+
+2. It asks for metadata: 
+   package name(folder name ex. node), 
+   version(1.0.0),
+   description, 
+   entry point (index.js is entry point for the application)
+
+3. To create a server:
+   var http = require('http');
+   http.createServer(function(req, res) {
+      res.writeHead(200, { 'Content-Type': 'text/html'});
+      res.end('Hello world')
+   }).listen(8080);
+
+4. To read a file:
+   var fs = require('fs');
+   fs.readFile(fileName, function(err, data){
+      res.writeHead(200, { 'Content-Type': 'text/html'});
+      res.write(data);
+      return res.end();
+   }).listen(8080);
+
+5. url Parsing:
+   var addr = 'http://localhost:8080/urlparsing.html?name=shahija';
+   var result = url.parse(addr);
+   result.hostName -> gives localhost:8080
+   result.pathName -> gives /urlparsing.html
+   result.search -> gives ?name=shahija (parameter)
+
+6. NPM(Node Package Manager):
+   1.using npm we install various packages to extend functionality
+   2.using express we can able to implement api functionality in a server.
+   3.api is an interface, which allows you to accept requests and based on the requests it process the requests and give response back.
+   4. Four main requests are:
+      1.GET -> GET request is made to retreive data from the server.
+      2.POST -> POST request is made to save the data into the server for further use.
+      3.PUT -> PUT request is made to update the data into a server.
+      4.DELETE -> DELETE request is made to delete data from a server.
+7. Express is a framework that allows you to implement api functionality. 
+8. with the npm i express command it creates package lock.json and node modules and all dependencies.
+9. Sending data into request using path variables(path varaibles data send to endpoint to use and process the request).
+10. node-persist package allows for persistent storage of node data.
+
+
+   

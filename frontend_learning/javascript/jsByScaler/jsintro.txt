@@ -1,0 +1,18 @@
+What is Javascript?
+1. It is a high level(writing code and execute rest of things will done automatically), multi paradigm and object oriented programming language.
+2. It is also synchronous(code executed line by line) and single-threaded in behaviour.
+3. It is a web language and used to make webpages and web applications work dynamically.
+Topics:
+1. Introduction to Javascript
+2. The Basics
+3. Control structures and conditionals.
+4. ES6 --> standard for js ecma script version6.
+5. Deep Diving into Functions.
+6. OOPS in JS.
+7. Functional Programming.
+8. Asyncronous JS
+9. Miscellaneous.
+Javascript on browser:
+1. Almost every browser is empowered by js.
+2. Every browser has embedded js engine for ex: chrome uses v8 engine, mozilla firefox uses spider monkey.
+3. The programs in this language are called scripts. They can be written right in a web pages HTML and run automatically as the page loads. 

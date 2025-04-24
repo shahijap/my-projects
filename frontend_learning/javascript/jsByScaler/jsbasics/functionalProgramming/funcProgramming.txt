@@ -1,0 +1,31 @@
+What is Functional Programming?
+1. Functional programming is a programming paradigm designed to handle functions in a better way in js(mainly pure functions).
+2. Javascript is a multi-paradigm language(like c), we can use object-oriented(like java), procedural and functional programming paradigms all at the same time in js.
+3. Functional programming has a few important concepts that we need to know and understand. By implementing these concepts in your applicatons, you will end up with more functional code. This will make a huge difference in your application, making it more readable, usable manageable easy to test and bug free.
+
+Key Feature of functional programming: 
+1. Imperative and declarative way of writing code
+2. Pure functions and what are side effects.
+3. Higher order functions(map, filter, reduce etc).
+4. Composition
+5. Closures
+6. Currying
+
+a) Imperative and declarative:
+1. Imperative:
+    1. How to go about a problem.
+    2. approach, structure, logic
+2. Declarative:
+    1. How to achieve the problem.
+
+b) What is a pure function?
+    1. A pure function is a function which:
+        a. given the same input, always returns the same output.
+        b. Produces no side effects.  
+        
+c) What are call back functions:
+ 1. In javascript, a callback function is a function that is passed into another function as an argument. This function can then be invoked at a later stage of time.
+ 2. Since, in javascript, functions are objects, functions can be passed as arguments.
+
+ d) Higher Order Functions?
+    1. Higher Order Functions are functions that operate on other functions, either by taking them as arguments or by returning them. In simple words, A higher order function is a function that receives a function as an argument or returns the function as output. 

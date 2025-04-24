@@ -1,0 +1,40 @@
+Variables  in Javascript?
+1. Variables are containers for storing data/storing data values.
+2. Variable means anything that can vary. In javascript, a Variable stores the data value that can be changed later on.
+The var keyword:
+1. There is a reserved keyword in javascript which is used to declare variables that is the 'var' keyword.
+2. We can store any datatype in a Variable.
+
+Dynamically vs statically typed languages:
+1. statically typed languages: each Variable and expression is already known at compile time.
+2. Dynamically type languages: Variables can receive different value at run time and their type is defined at run time.
+
+Examples:
+
+1. It is a statically typed(java, c++) java code where we define datatypes to a Variable  before executing code to run time.
+2. before run time type checking is done.
+
+class Scaler {
+    public static void main(string[] args){
+        int var = 10;
+        char letter = 'q';
+        string s1 = 'java';
+        Boolean isAvailable = true;
+    }
+}
+
+1. Type checking is done in run time.
+
+var a = 10;
+var greet = 'Hello';
+
+Rules to declare a variable:
+1. All javascript variables must be identified with unique names.
+2. These unique names are called identifiers.
+3. identifiers can be short names (like x and y) or more descriptive names(age, sum)
+4. The general rules for constructing names for variables(unique identifiers) are:
+    1. Names can contain letters, digits, underscores, and dollar signs.
+    2. Names must begin with a letter.
+    3. Names can also begin with $ and _ (but we will not use it in this tutorial).
+    4. Names are case sensitive (y and Y are different variables).
+    5. Reserved words (like javascript keywords) cannot be used as names. 
