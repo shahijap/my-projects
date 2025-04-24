@@ -1,0 +1,238 @@
+JAVASCRIPT ESSENTIALS
+---------------------------
+
+Variables, Data Types, and Operators
+---------------------------------------
+Key Points:
+-----------
+Variables: Use var, let, and const to store data.
+Data Types: Primitive types include string, number, boolean, null, undefined, and symbol.
+Operators:
+Arithmetic: +, -, *, /, %
+Comparison: ==, ===, <, >, <=, >=
+Logical: &&, ||, !
+
+Basic Math Operations
+ 1. Create a program to:
+    Add, subtract, multiply, and divide two numbers.
+    show the result in div in the following format as Addition: result...
+
+
+Control Structures (if statements, loops)
+------------------------------------------
+Key Points:
+-----------
+If Statements: Use if, else if, and else to make decisions.
+Loops:
+for: Repeat a block of code a specific number of times.
+while: Repeat until a condition is false.
+do...while: Runs at least once before checking the condition.
+
+1. Compare Two Numbers
+   Write a program that checks which of two numbers is greater.
+   Show the result in a div
+2. Print Even Numbers (1 to 20)
+   Use a loop to print even numbers between 1 and 20.
+
+Introduction to Functions
+---------------------------
+Key Points:
+-----------
+A function is a reusable block of code.
+Use the function keyword to declare a function.
+Functions can take parameters (inputs) and return values.
+
+1. Create a Greeting Function
+   Write a function greet that takes a name as input and logs:
+   Hello, [name]!
+
+MAIN TASK
+-----------------------
+Simple Calculator with Functions
+Write functions for addition, subtraction, multiplication, and division. Call them with two numbers.
+create a html page that replicate calculator design
+
+
+DISCUSSION
+----------------------------
+4. Let, Var, and Const
+
+Key Points:
+------------
+var: Function-scoped, hoisted, and can be redeclared.
+let: Block-scoped and not hoisted.
+const: Block-scoped, cannot be reassigned.
+
+Task 8: Variable Behavior
+Declare three variables using let, var, and const to store a name.
+Reassign the value for let and var.
+Observe what happens when you try to reassign const.
+
+5. Hoisting and Scopes
+
+Key Points:
+-------------
+Hoisting: Variables declared with var are moved to the top of their scope.
+Scope:
+Global Scope: Accessible throughout the program.
+Local Scope: Declared inside a function or block.
+
+Task 9: Hoisting Example
+Write two examples to show:
+Hoisting with var.
+The difference when using let and const.
+
+Task 10: Local vs Global Scope
+Write a program that declares a variable:
+Inside a function (local scope).
+Outside the function (global scope).
+Log both variables to see the difference.
+
+6. CLOSURES
+--------------------------
+Key Points:
+-----------------
+Closures allow a function to access variables from its outer scope even after the outer function has finished execution.
+
+Task 11: Counter Function
+   Create a function counter that increments a number each time it is called.
+
+7. Higher-Order Functions (HOFs)
+----------------------------------
+Key Points:
+--------------
+HOFs are functions that take other functions as arguments or return functions.
+Common examples: map(), filter(), reduce().
+
+Task: Array map Example
+   1.Create an array of numbers.
+   2.Use the map method to create a new array where each number is doubled.
+
+10. Event Bubbling and Capturing
+----------------------------------
+Key Points:
+--------------
+Events propagate in two phases:
+Capturing Phase: Events travel down the DOM tree.
+Bubbling Phase: Events travel up the DOM tree.
+Use stopPropagation() to stop event propagation.
+
+Task 17: Parent and Child Clicks
+Create two <div> elements (one inside the other).
+Add click event listeners to both.
+Observe how events bubble from the child to the parent. Log the event messages.
+
+DOM manipulation and Event handling
+-----------------------------------
+Key Points (DOM manipulation):
+------------
+The DOM (Document Object Model) represents an HTML document as a tree structure.
+Common methods to manipulate the DOM:
+getElementById(): Selects an element by its ID.
+querySelector(): Selects the first matching element based on a CSS selector.
+
+Key Points (Event handling):
+---------------
+Events are user interactions with the page.
+Attach event listeners using addEventListener().
+
+1. Toggle Visibility
+   1.Create a paragraph <p> and a button.
+   2.Write a function to hide/show the paragraph each time the button is clicked.
+2. Counter
+   1.Add two buttons: "Increment" and "Decrement".
+   2.Write a function to increase/decrease the number displayed on the page.
+
+
+Advanced Concepts of JavaScript
+----------------------------------
+1. Arrow Functions
+
+Key Points:
+---------------
+Arrow functions are a shorter way to write functions.
+Syntax: const func = (param) => { ... }.
+If there's only one statement, you can omit {} and return.
+Arrow functions do not have their own this context.
+
+TASK: Filter Positive Numbers:
+      1.Write an arrow function that takes an array and filters out positive numbers.
+
+2. Destructuring Arrays and Objects
+
+Key Points:
+------------------
+Destructuring allows you to unpack values from arrays or properties from objects into variables.
+
+TASK: Extract Object Properties:
+      1. Create an object and extract properties into variables
+
+3. Working with Arrays
+
+Key Points:
+-------------------
+Common Methods:
+push(): Adds to the end.
+pop(): Removes the last element.
+map(): Creates a new array by transforming each element.
+filter(): Creates a new array with elements that match a condition.
+find(): Returns the first element that satisfies a condition.
+
+
+TASK: Add and Remove Elements:
+Create an array and Add elements using push() and remove the elements using pop().
+
+4. Objects and Their Properties
+--------------------------------
+Key Points:
+------------
+Objects store data as key-value pairs.
+Access properties using dot notation (obj.key) or bracket notation (obj['key']).
+Use Object.keys(), Object.values(), or Object.entries() to work with object properties.
+
+TASK-1: Add and Update Properties:
+      Create an object and add and update object properties.
+TASK-2: Loop Through an Object:
+       1.Create an object
+       2. Write a program to print all the keys and values of the object.
+
+Working with Asynchronous JavaScript
+--------------------------------------
+Callbacks
+
+Key Points:
+-------------
+A callback is a function passed as an argument to another function and executed later.
+
+Common use case: Asynchronous operations like reading files or fetching data.
+
+Task:
+
+Simulate a Delayed Task:
+--------------------------
+Use setTimeout() to simulate a task that logs "Task done!" after 2 seconds.
+
+Promises
+---------------
+Key Points:
+-----------
+A Promise represents a value that may be available now, later, or never.
+States of a Promise:
+Pending
+Fulfilled (resolved)
+Rejected
+
+Task:
+Create a Simple Promise:
+Create a promise that resolves with "Success!" after 1 second.
+
+Async/Await
+---------------
+Key Points:
+-------------
+async makes a function return a Promise.
+await pauses the function execution until the promise resolves.
+
+Task:
+Simulate Fetching Data:
+Write an async function that simulates fetching user data (use setTimeout to delay).

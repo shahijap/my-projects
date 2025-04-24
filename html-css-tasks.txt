@@ -1,0 +1,73 @@
+Task 1: Basic HTML Layout
+Objective: Create a simple webpage structure.
+
+Create a basic HTML page with the following elements:
+A header containing a navigation bar with 3 links: Home, About, Contact.
+A main section with a heading (<h1>) that says "Welcome to My Website".
+A paragraph (<p>) under the heading describing the purpose of the website.
+A footer that includes some copyright information.
+Key Concepts: HTML structure, semantic tags, headers, footers, paragraphs.
+
+Task 2: Styling with CSS
+Objective: Style the webpage created in Task 1.
+
+Apply the following CSS styles:
+The background color of the body should be light gray.
+The text color of the header should be white, and the background color should be navy.
+The main heading (<h1>) should be centered and have a font size of 36px.
+The paragraph should have a line height of 1.6 and be aligned to the left.
+The footer text should be centered, with a background color of dark gray, and a font size of 14px.
+Key Concepts: CSS styling, colors, text alignment, fonts, box model.
+
+Task 3: Responsive Design
+Objective: Make the webpage responsive.
+
+Use media queries to adjust the layout for smaller screens (mobile):
+For screens smaller than 600px, make the navigation links stack vertically.
+Reduce the font size of the heading (<h1>) to 24px and center all text in the main section.
+The footer should take up the full width and stick to the bottom of the page.
+Key Concepts: Media queries, responsive design, mobile-first approach.
+
+Task 4: CSS Flexbox
+Objective: Use Flexbox to align items.
+
+Create a navigation bar in the header using Flexbox:
+The 3 navigation links should be evenly spaced across the width of the header.
+When viewed on smaller screens (under 600px), the links should stack vertically.
+Add hover effects to the links to change their background color on hover.
+Key Concepts: Flexbox, alignment, hover states, responsive navigation.
+
+Task 5: CSS Grid
+Objective: Use CSS Grid to create a gallery layout.
+
+Create a 3x3 image gallery using CSS Grid in a new section:
+Add 9 image placeholders (use <img> tags with any sample images or placeholders).
+The images should be arranged in a grid with 3 columns and 3 rows.
+Add a gap of 10px between the images.
+For screens smaller than 600px, change the layout to 2 columns.
+Key Concepts: CSS Grid, layout, grid gap, responsive grid design.
+
+Task 6: Forms and Inputs
+Objective: Create a basic contact form.
+
+Create a contact form in the main section:
+Include input fields for "Name", "Email", and "Message" (use <input> and <textarea>).
+Add a submit button below the form.
+Style the form: input fields should have padding, and the form should be centered horizontally on the page.
+Key Concepts: Forms, inputs, styling form elements, layout.
+
+Task 7: Transitions and Animations
+Objective: Add some simple animations to your page.
+
+Apply CSS transitions to the navigation links:
+When a user hovers over a navigation link, the background color should smoothly change over 0.3 seconds.
+Add an animation to the main heading (<h1>) that makes it fade in when the page loads.
+Key Concepts: CSS transitions, animations, keyframes.
+
+Task 8: Positioning
+Objective: Practice using CSS positioning.
+
+Create a call-to-action button that is positioned at the bottom-right corner of the viewport, using position: fixed;.
+The button should have some padding and a background color of your choice.
+When clicked, the button should scroll the page back to the top.
+Key Concepts: Positioning (fixed, absolute), scroll behavior, buttons.
